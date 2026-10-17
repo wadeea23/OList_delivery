@@ -36,7 +36,7 @@ An analysis of 96,470 completed orders revealed that 91.9% arrived earlier than 
 - `purchase_day`: Day of the week
 
 ## Streamlit Application
-
+https://olistdelivery.streamlit.app/
 The application simulates a simple shopping journey:
 
 1. Select products and quantities.
@@ -89,3 +89,4 @@ streamlit run delivery_app.py
 
 - Wadeea
 - Nouf
+ 
