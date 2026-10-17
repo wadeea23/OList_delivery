@@ -7,10 +7,10 @@ from math import radians, sin, cos, asin, sqrt # i need it to cal langtide an la
 model = joblib.load("data/delivery.pkl")
 folder = os.path.dirname(os.path.abspath(__file__))
 products = pd.read_csv(os.path.join(folder, "olist_products_dataset.csv"))
-items = pd.read_csv("olist_order_items_dataset.csv")
-sellers = pd.read_csv("olist_sellers_dataset.csv")
-customers = pd.read_csv("olist_customers_dataset.csv")
-geo = pd.read_csv("olist_geolocation_dataset.csv")
+items = pd.read_csv(os.path.join(folder, "olist_order_items_dataset.csv"))
+sellers = pd.read_csv(os.path.join(folder, "olist_sellers_dataset.csv"))
+customers = pd.read_csv(os.path.join(folder, "olist_customers_dataset.csv"))
+geo = pd.read_csv(os.path.join(folder, "olist_geolocation_dataset.csv"))
 
 # Features used by the model
 cols = [
