@@ -5,9 +5,7 @@ A machine learning project that predicts e-commerce delivery duration using the 
 
 ## Problem Statement
 
-Customers want to know when their orders will arrive. Reliable delivery estimates can help improve customer experience and support better order planning.
-
-This project aims to predict delivery duration based on order details, product characteristics, seller-customer distance, and purchase date.
+An analysis of 96,470 completed orders revealed that 91.9% arrived earlier than estimated, while 6.8% arrived late and only 1.3% arrived on time. This significant gap suggests that Olist's delivery estimates are often overly conservative and do not fully reflect its actual delivery performance, potentially affecting customer expectations and highlighting the need for more accurate estimates.
 
 ## Project Overview
 
