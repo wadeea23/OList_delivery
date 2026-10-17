@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import joblib
+import os
 from math import radians, sin, cos, asin, sqrt # i need it to cal langtide an latitude 
 
 # Load model and data
