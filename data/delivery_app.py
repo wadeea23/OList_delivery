@@ -5,7 +5,8 @@ from math import radians, sin, cos, asin, sqrt # i need it to cal langtide an la
 
 # Load model and data
 model = joblib.load("data/delivery.pkl")
-products = pd.read_csv("olist_products_dataset.csv")
+folder = os.path.dirname(os.path.abspath(__file__))
+products = pd.read_csv(os.path.join(folder, "olist_products_dataset.csv"))
 items = pd.read_csv("olist_order_items_dataset.csv")
 sellers = pd.read_csv("olist_sellers_dataset.csv")
 customers = pd.read_csv("olist_customers_dataset.csv")
