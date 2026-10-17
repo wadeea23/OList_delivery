@@ -16,11 +16,7 @@ An analysis of 96,470 completed orders revealed that 91.9% arrived earlier than 
 - **Hyperparameter Tuning:** GridSearchCV
 - **Evaluation Metric:** Mean Absolute Error (MAE)
 
-The data was prepared at the order level, and features were engineered from product, order, seller, customer location, and purchase date information.
-
 ## Features
-
-The model uses **9 features** grouped into four categories:
 
 **Order Information**
 - `item_count`: Number of items in the order
@@ -48,8 +44,6 @@ The application simulates a simple shopping journey:
 3. Choose an order date.
 4. Place the order and view the estimated delivery duration, product total, and shipping cost.
 
-The app also displays the expected arrival date based on the predicted delivery duration, where supported by the application logic.
-
 ## Technologies Used
 
 - Python
@@ -74,7 +68,6 @@ streamlit run delivery_app.py
 
 **3. Required Files**
 
-Make sure the following files are available in the project directory:
 
 - `delivery_app.py`
 - `delivery.pkl`
@@ -84,7 +77,6 @@ Make sure the following files are available in the project directory:
 - `olist_customers_dataset.csv`
 - `olist_geolocation_dataset.csv`
 
-The file `product_category_name_translation.csv` is optional if English product category names are supported by the application.
 
 ## Limitations and Future Improvements
 
