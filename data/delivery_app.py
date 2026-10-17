@@ -4,7 +4,7 @@ import joblib
 from math import radians, sin, cos, asin, sqrt # i need it to cal langtide an latitude 
 
 # Load model and data
-model = joblib.load("delivery.pkl")
+model = joblib.load("data/delivery.pkl")
 products = pd.read_csv("olist_products_dataset.csv")
 items = pd.read_csv("olist_order_items_dataset.csv")
 sellers = pd.read_csv("olist_sellers_dataset.csv")
