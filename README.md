@@ -78,7 +78,7 @@ streamlit run delivery_app.py
 - `olist_geolocation_dataset.csv`
 
 
-## Limitations and Future Improvements
+## Future Improvements
 
 - Product categories are used instead of individual product names.
 - Some product or shipping details may require estimates when information is unavailable.
