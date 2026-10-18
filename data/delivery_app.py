@@ -232,6 +232,7 @@ if st.button("Order Now"):
                 "purchase_day": today.weekday()}])
             
             prediction = model.predict(order[cols])[0]
+            arrival_date = today + pd.Timedelta(days=round(prediction))
             st.success("Order placed successfully!")
             st.write("Customer:", name)
             st.write("City:", city)
