@@ -232,15 +232,17 @@ if st.button("Check information"):
                 "purchase_day": today.weekday()
             }])
 
-            prediction = model.predict(order[cols])[0]
-            arrival_date = today + pd.Timedelta(days=round(prediction))
-            st.write("Customer:", name)
-            st.write("City:", city)
-            st.write("State:", state_names.get(state, state))
-            st.write(f"Product total: R$ {price_sum:.2f}")
-            st.write(f"Shipping cost: R$ {shipping_sum:.2f}")
-            st.write(f"Estimated delivery duration: {prediction:.1f} days")
-            st.write("Expected arrival date:", arrival_date.strftime("%d %B %Y"))
-            st.button("Orders now")
-            st.success("Order placed successfully!")
-            
+           if st.button("Check Information"):
+    prediction = model.predict(order[cols])[0]
+    arrival_date = today + pd.Timedelta(days=round(prediction))
+
+    st.write("Customer:", name)
+    st.write("City:", city)
+    st.write("State:", state_names.get(state, state))
+    st.write(f"Product total: R$ {price_sum:.2f}")
+    st.write(f"Shipping cost: R$ {shipping_sum:.2f}")
+    st.write(f"Estimated delivery duration: {prediction:.1f} days")
+    st.write("Expected arrival date:", arrival_date.strftime("%d %B %Y"))
+
+    if st.button("Place Order"):
+        st.success("Order placed successfully!")
