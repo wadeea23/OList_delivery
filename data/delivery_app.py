@@ -231,8 +231,8 @@ if st.button("Check information"):
                 "purchase_month": today.month,
                 "purchase_day": today.weekday()}])
 if st.button("Check Information"):
-    prediction = model.predict(order[cols])[0]
-    arrival_date = today + pd.Timedelta(days=round(prediction))
+            prediction = model.predict(order[cols])[0]
+            arrival_date = today + pd.Timedelta(days=round(prediction))
             st.write("Customer:", name)
             st.write("City:", city)
             st.write("State:", state_names.get(state, state))
