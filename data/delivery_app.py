@@ -149,7 +149,7 @@ zip_code = (
 )
 
 # Place order
-if st.button("Order Now"):
+if st.button("Check information"):
 
     if not name.strip() or not selected_products:
         st.warning("Please complete all information.")
@@ -164,7 +164,7 @@ if st.button("Order Now"):
 
     elif not zip_code:
         st.warning("Could not find a ZIP code for this city.")
-
+       
     else:
         item_count = int(selected["quantity"].sum())
         seller_count = selected["seller_id"].nunique()
@@ -242,3 +242,5 @@ if st.button("Order Now"):
             st.write(f"Shipping cost: R$ {shipping_sum:.2f}")
             st.write(f"Estimated delivery duration: {prediction:.1f} days")
             st.write("Expected arrival date:", arrival_date.strftime("%d %B %Y"))
+            st.button("Orders now")
+            
