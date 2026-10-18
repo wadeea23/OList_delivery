@@ -149,7 +149,7 @@ zip_code = (
 )
 
 # Place order
-if st.button("Check information"):
+if st.button("Order Now"):
 
     if not name.strip() or not selected_products:
         st.warning("Please complete all information.")
@@ -230,9 +230,9 @@ if st.button("Check information"):
                 ).max(),
                 "purchase_month": today.month,
                 "purchase_day": today.weekday()}])
-if st.button("Check Information"):
+            
             prediction = model.predict(order[cols])[0]
-            arrival_date = today + pd.Timedelta(days=round(prediction))
+            st.success("Order placed successfully!")
             st.write("Customer:", name)
             st.write("City:", city)
             st.write("State:", state_names.get(state, state))
@@ -240,5 +240,4 @@ if st.button("Check Information"):
             st.write(f"Shipping cost: R$ {shipping_sum:.2f}")
             st.write(f"Estimated delivery duration: {prediction:.1f} days")
             st.write("Expected arrival date:", arrival_date.strftime("%d %B %Y"))
-            st.button("Orders now")
-            st.success("Order placed successfully!")
+           
