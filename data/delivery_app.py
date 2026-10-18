@@ -23,7 +23,7 @@ cols = [
     "purchase_month", "purchase_day"
 ]
 
-st.title("Brazilian Online Store")
+st.title("Almutaweaa Online Store")
 st.write("Place your order and estimate your delivery time.")
 
 # Prepare product data
