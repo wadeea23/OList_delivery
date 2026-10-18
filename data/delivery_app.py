@@ -241,3 +241,4 @@ if st.button("Order Now"):
             st.write(f"Product total: R$ {price_sum:.2f}")
             st.write(f"Shipping cost: R$ {shipping_sum:.2f}")
             st.write(f"Estimated delivery duration: {prediction:.1f} days")
+            st.write(f"youre orders will arrived at {today_sum:.3f}days")
