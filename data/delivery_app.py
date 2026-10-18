@@ -234,7 +234,6 @@ if st.button("Check information"):
 
             prediction = model.predict(order[cols])[0]
             arrival_date = today + pd.Timedelta(days=round(prediction))
-            st.success("Order placed successfully!")
             st.write("Customer:", name)
             st.write("City:", city)
             st.write("State:", state_names.get(state, state))
@@ -243,4 +242,5 @@ if st.button("Check information"):
             st.write(f"Estimated delivery duration: {prediction:.1f} days")
             st.write("Expected arrival date:", arrival_date.strftime("%d %B %Y"))
             st.button("Orders now")
+            st.success("Order placed successfully!")
             
