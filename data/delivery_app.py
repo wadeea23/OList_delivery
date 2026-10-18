@@ -232,7 +232,7 @@ if st.button("Check information"):
                 "purchase_day": today.weekday()
             }])
 
-           if st.button("Check Information"):
+if st.button("Check Information"):
     prediction = model.predict(order[cols])[0]
     arrival_date = today + pd.Timedelta(days=round(prediction))
 
